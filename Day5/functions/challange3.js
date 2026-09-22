@@ -1,19 +1,17 @@
-// Challenge 3 : Somme des Éléments
-// Écrivez un programme JavaScript qui calcule et affiche la somme des éléments d'un tableau d'entiers. 
-// Le programme doit demander le nombre d'éléments, puis les éléments du tableau, et afficher la somme totale.
+// Challenge 3 : Fonction de Maximum
+// Écrivez une fonction JavaScript qui prend deux nombres en paramètres et retourne le plus grand des deux.
+//  Utilisez cette fonction pour afficher le maximum entre deux nombres.
 
-const prompt=require("prompt-sync")();
-function SomeFunction(){
-    const n=Number(prompt("entrer les nombre d elements:"));
-    let tab=[];
-    let sum=0;
-    for(let i=0;i<n;i++){
-        const valeur=Number(prompt("entre les valeur du l element :"));
-        tab.push(valeur);
-        sum=sum+valeur;
-    }console.log(sum);
-}
-SomeFunction();
+
+function Maximum(a,b){
+   if(a>b){
+    return a;
+   }else{
+    return b; 
+   }
+  
+} const result=Maximum(2,5);
+console.log(result);
 
 
 

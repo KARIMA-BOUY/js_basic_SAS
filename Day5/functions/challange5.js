@@ -1,12 +1,12 @@
-// Challenge 5 : Trouver le Minimum
-// Écrivez un programme JavaScript qui trouve et affiche le plus petit élément dans un tableau d'entiers.
-//  Le programme doit demander le nombre d'éléments et les éléments du tableau.
+// Challenge 5 : Fonction de Factorielle
+// Écrivez une fonction JavaScript qui calcule la factorielle d'un entier positif. La fonction doit prendre un entier en paramètre et retourner sa factorielle. 
+// Utilisez cette fonction pour afficher la factorielle d'un nombre donné.
 
-function Minimum(a,b){
-    if(a<b){
-        return a;
-    }else{
-        return b;
+function factorielle(n){
+    let result=1;
+    for(let i=1;i<n;i++){
+      result=result*i;
     }
-}const result=Minimum(5,6);
-console.log(result);
+    return result;
+}console.log(factorielle(7));
+
