@@ -197,12 +197,16 @@ function  Recherche(){
         console.log("condidat introuvable")
      }
 }
-// function Statistique(){
-//  if(candidats.length===0){
-//     console.log("Aucune candidat");
-//  for()
-//  }
-// }
+function Statistique(){
+    if(candidats.length===0){
+        console.log("aucune candidat trouver");
+    }
+    let nbrTotal=0;
+    for(let i=0;i<candidats.length;i++){
+
+    }
+
+}
 function Menu() {
     let choix;
     do {
