@@ -191,21 +191,33 @@ function  Recherche(){
      for(let i=0;i<candidats.length;i++){
         if(candidats[i].nom===nom){
              afficherUnCandidat(candidats[i]);
-             trouve=trouve;
+             trouve=true;
         }
      }if(trouve===false){
         console.log("condidat introuvable")
      }
 }
-function Statistique(){
-    if(candidats.length===0){
-        console.log("aucune candidat trouver");
+    function Statistique() {
+    console.log("=== STATISTIQUES ===");
+    if (candidats.length === 0) {
+        console.log("Aucun candidat.");
+        return;
     }
-    let nbrTotal=0;
-    for(let i=0;i<candidats.length;i++){
-
+    let totalVotes = 0;
+    let maxVotes = -1;
+    let candidatGagnant = null;
+    for (let i = 0; i < candidats.length; i++) {
+        let votes = candidats[i].electeurs.length;
+        totalVotes = totalVotes + votes;
+        if (votes > maxVotes) {
+            maxVotes = votes;
+            candidatGagnant = candidats[i];
+        }
     }
-
+    console.log("Nombre de candidats : " + candidats.length);
+    console.log("Nombre total de votes : " + totalVotes);
+    console.log("Candidat avec le plus de votes : " +candidatGagnant.nom +" " +candidatGagnant.prenom);
+    console.log("Nombre de votes : " + maxVotes);
 }
 function Menu() {
     let choix;
